@@ -1,0 +1,13 @@
+{
+  "mobamputation.config.prop.gibTime.name": "Gliedmaß-Lebensdauer",
+  "mobamputation.config.prop.gibGroundTime.name": "Gliedmaß-Bodenlebensdauer",
+  "mobamputation.config.prop.blood.name": "Bluteffekte",
+  "mobamputation.config.prop.bloodCount.name": "Blut-Partikelmenge",
+  "mobamputation.config.prop.bloodSplurt.name": "Blut spritzt von Wunden",
+  "mobamputation.config.prop.greenBlood.name": "Grünes Blut",
+  "mobamputation.config.prop.playerGibs.name": "Spieler zerhacken",
+  "mobamputation.config.prop.gibPushing.name": "Gliedmaßen bewegen Entitys",
+  "mobamputation.config.prop.headlessDeath.name": "Kopfloser Tod",
+  "mobamputation.config.prop.projectileList.name": "Projektile, die Gliedmaßen beeinflussen",
+  "mobamputation.config.prop.allowProjectileGibbing.name": "Projektilschaden-Amputation"
+}

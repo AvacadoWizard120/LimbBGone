@@ -1,0 +1,13 @@
+{
+  "mobamputation.config.prop.gibTime.name": "Durée de vie d'un membre",
+  "mobamputation.config.prop.gibGroundTime.name": "Durée au sol d'un membre",
+  "mobamputation.config.prop.blood.name": "Particules de sang",
+  "mobamputation.config.prop.bloodCount.name": "Quantité de particules de sang",
+  "mobamputation.config.prop.bloodSplurt.name": "Jets de sang des blessures",
+  "mobamputation.config.prop.greenBlood.name": "Sang vert",
+  "mobamputation.config.prop.playerGibs.name": "Joueur démembrable",
+  "mobamputation.config.prop.gibPushing.name": "Les membres poussent les entités",
+  "mobamputation.config.prop.headlessDeath.name": "Mort par décapitation",
+  "mobamputation.config.prop.projectileList.name": "Projectiles qui affectent les membres",
+  "mobamputation.config.prop.allowProjectileGibbing.name": "Démembrement par projectile"
+}

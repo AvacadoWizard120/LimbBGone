@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mobamputation:beheading",
+    "mobamputation:dismemberment",
+    "mobamputation:severance",
+    "mobamputation:reinforcement",
+    "mobamputation:anatomical_integrity"
+  ]
+}

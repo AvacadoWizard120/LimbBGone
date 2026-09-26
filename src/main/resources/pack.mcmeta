@@ -1,6 +1,6 @@
 {
-   "pack":{
-      "pack_format":3,
-      "description":"Mob Amputation"
-   }
+  "pack": {
+    "pack_format": 34,
+    "description": "Mob Amputation resources"
+  }
 }

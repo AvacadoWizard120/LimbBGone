@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 8,
+  "description": {
+    "translate": "enchantment.mobamputation.anatomical_integrity"
+  },
+  "effects": {},
+  "exclusive_set": "#mobamputation:exclusive_set/amputation_protection",
+  "max_cost": {
+    "base": 70,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 35,
+    "per_level_above_first": 0
+  },
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#mobamputation:amputation_protective_armor",
+  "weight": 1
+}

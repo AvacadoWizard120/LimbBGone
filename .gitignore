@@ -1,15 +1,15 @@
-*.class
-
-# Package Files #
-*.war
-*.ear
-
-# IDEA Files #
+.gradle/
+.tmp/
+build/
+run/
+out/
+.idea/
+.agents/
+.codex/
 *.iml
-/.idea
-
-# Gradle #
-/.gradle
-/build
-/libs
-/src/api
+versions/*/build/
+versions/*/run/
+*.local.json
+*.local.properties
+.env
+.env.*

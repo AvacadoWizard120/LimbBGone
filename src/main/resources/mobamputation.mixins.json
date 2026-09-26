@@ -1,0 +1,40 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.avacadowizard120.mobamputation.mixin",
+  "compatibilityLevel": "${mixin_compatibility_level}",
+  "mixins": [
+    "AbstractSkeletonMixin",
+    "FishingHookMixin",
+    "LivingEntityDamageMixin",
+    "LivingEntityHandMixin",
+    "ProjectileMixin",
+    "MinecraftServerMixin",
+    "PlayerMixin",
+    "PlayerListMixin",
+    "PlayerAttackMixin",
+    "ProjectileUtilMixin",
+    "ServerPlayerMixin",
+    "ServerEntityMixin"
+  ],
+  "client": [
+    "client.ClientLevelMixin",
+    "client.CreeperClientMixin",
+    "client.CreeperModelAccessor",
+    "client.CreeperModelMixin",
+    "client.CustomHeadLayerMixin",
+    "client.EntityRenderDispatcherMixin",
+    "client.HumanoidArmorLayerMixin",
+    "client.HumanoidModelMixin",
+    "client.InventoryScreenMixin",
+    "client.ItemInHandLayerMixin",
+    "client.ItemInHandRendererMixin",
+    "client.LivingEntityClientMixin",
+    "client.LivingEntityRendererMixin",
+    "client.MinecraftMixin",
+    "client.MultiPlayerGameModeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

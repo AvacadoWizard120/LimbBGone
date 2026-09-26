@@ -1,0 +1,115 @@
+plugins {
+    id 'net.minecraftforge.gradle'
+}
+
+def prop = { name -> project.property(name).toString() }
+
+def minecraftVersion = prop('deps.minecraft')
+def modId = prop('mod.id')
+def modName = prop('mod.name')
+def modVersion = prop('mod.version')
+def modGroup = prop('mod.group')
+def modDescription = prop('mod.description')
+def modAuthor = prop('mod.author')
+def modLicense = prop('mod.license')
+def modHomepage = prop('mod.homepage')
+def modSources = prop('mod.sources')
+def modIssues = prop('mod.issues')
+def versionRange = prop('version_range')
+def javaVersion = prop('java_version') as int
+def mixinCompatibilityLevel = prop('mixin_compatibility_level')
+
+group = modGroup
+base.archivesName = modId
+version = "${modVersion}+${minecraftVersion}-forge"
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(javaVersion)
+    sourceCompatibility = JavaVersion.toVersion(javaVersion)
+    targetCompatibility = JavaVersion.toVersion(javaVersion)
+    withSourcesJar()
+}
+
+minecraft {
+    mappings channel: 'official', version: minecraftVersion
+
+    runs {
+        configureEach {
+            workingDir = project.file('run/')
+        }
+        client {}
+        server {
+            args '--nogui'
+        }
+    }
+}
+
+// Forge 1.21's development mod-folder scanner expects classes and metadata in
+// one directory. The packaged jar remains unchanged.
+sourceSets {
+    main {
+        output.setResourcesDir(file("${layout.buildDirectory.get()}/classes/java/main"))
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:${prop('deps.forge')}")
+    compileOnly 'org.spongepowered:mixin:0.8.7'
+    annotationProcessor 'org.spongepowered:mixin:0.8.7:processor'
+}
+
+tasks.named('compileJava', JavaCompile).configure {
+    dependsOn tasks.named('stonecutterGenerate')
+    options.encoding = 'UTF-8'
+    options.release = javaVersion
+}
+
+tasks.named('processResources', ProcessResources).configure {
+    dependsOn tasks.named('stonecutterGenerate')
+    mustRunAfter tasks.named('compileJava')
+    def props = [
+        mod_id: modId,
+        mod_name: modName,
+        mod_version: modVersion,
+        mod_description: modDescription,
+        mod_author: modAuthor,
+        mod_license: modLicense,
+        mod_homepage: modHomepage,
+        mod_sources: modSources,
+        mod_issues: modIssues,
+        minecraft_version: minecraftVersion,
+        version_range: versionRange,
+        loader_version_range: prop('loader_version_range'),
+        forge_version_range: prop('forge_version_range'),
+        mixin_compatibility_level: mixinCompatibilityLevel
+    ]
+    inputs.properties(props)
+    filesMatching(['META-INF/mods.toml', "${modId}.mixins.json".toString()]) {
+        expand props
+    }
+    exclude 'fabric.mod.json', 'quilt.mod.json', 'META-INF/neoforge.mods.toml'
+}
+
+tasks.named('jar', Jar).configure {
+    from(rootProject.file('COPYING')) { into('META-INF') }
+    from(rootProject.file('COPYING.LESSER')) { into('META-INF') }
+    from(rootProject.file('NOTICE')) { into('META-INF') }
+    manifest {
+        attributes 'MixinConfigs': "${modId}.mixins.json"
+    }
+}
+
+tasks.register('buildAndCollect', Copy) {
+    group = 'build'
+    dependsOn tasks.named('build')
+    from tasks.named('jar', Jar).flatMap { it.archiveFile }
+    into rootProject.layout.buildDirectory.dir("libs/${modVersion}")
+}

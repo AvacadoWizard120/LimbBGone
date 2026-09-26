@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_original_author} (original)",
+    "${mod_port_author} (port)"
+  ],
+  "license": "${mod_license}",
+  "contact": {
+    "homepage": "${mod_homepage}",
+    "sources": "${mod_sources}",
+    "issues": "${mod_issues}"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "${mod_entrypoint}"
+    ],
+    "client": [
+      "io.github.avacadowizard120.mobamputation.network.MobAmputationClientNetworking"
+    ],
+    "modmenu": [
+      "io.github.avacadowizard120.mobamputation.client.MobAmputationModMenu"
+    ]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "${fabric_loader_version_range}",
+    "fabric-api": "*",
+    "minecraft": "${version_range}",
+    "java": ">=21"
+  }
+}

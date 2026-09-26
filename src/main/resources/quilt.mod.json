@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "quilt_loader": {
+    "group": "${mod_group}",
+    "id": "${mod_id}",
+    "version": "${mod_version}",
+    "metadata": {
+      "name": "${mod_name}",
+      "description": "${mod_description}",
+      "contributors": {
+        "${mod_original_author}": "Original author",
+        "${mod_port_author}": "Port maintainer"
+      },
+      "license": "${mod_license}",
+      "contact": {
+        "homepage": "${mod_homepage}",
+        "sources": "${mod_sources}",
+        "issues": "${mod_issues}"
+      }
+    },
+    "intermediate_mappings": "net.fabricmc:intermediary",
+    "entrypoints": {
+      "main": "${mod_entrypoint}",
+      "client": "io.github.avacadowizard120.mobamputation.network.MobAmputationClientNetworking",
+      "modmenu": "io.github.avacadowizard120.mobamputation.client.MobAmputationModMenu"
+    },
+    "depends": [
+      {
+        "id": "quilt_loader",
+        "versions": "${quilt_loader_version_range}"
+      },
+      {
+        "id": "fabric-api",
+        "versions": "*"
+      },
+      {
+        "id": "minecraft",
+        "versions": "${version_range}"
+      }
+    ]
+  },
+  "mixin": "${mod_id}.mixins.json"
+}

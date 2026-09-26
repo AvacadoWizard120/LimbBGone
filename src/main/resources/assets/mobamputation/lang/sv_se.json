@@ -1,0 +1,13 @@
+{
+  "mobamputation.config.prop.gibTime.name": "Avhuggning livstid",
+  "mobamputation.config.prop.gibGroundTime.name": "Avhuggning marktid",
+  "mobamputation.config.prop.blood.name": "Blodseffekter",
+  "mobamputation.config.prop.bloodCount.name": "Mängd blodpartiklar",
+  "mobamputation.config.prop.bloodSplurt.name": "Blodseffekter i sår",
+  "mobamputation.config.prop.greenBlood.name": "Grönt blod",
+  "mobamputation.config.prop.playerGibs.name": "Spelaravhuggning",
+  "mobamputation.config.prop.gibPushing.name": "Kollision med avhuggna delar",
+  "mobamputation.config.prop.headlessDeath.name": "Huvudlös död",
+  "mobamputation.config.prop.projectileList.name": "Projektil som påverkar avhuggning",
+  "mobamputation.config.prop.allowProjectileGibbing.name": "Avhuggning med projektilskada"
+}

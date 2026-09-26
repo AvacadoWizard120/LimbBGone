@@ -1,0 +1,23 @@
+{
+  "anvil_cost": 4,
+  "description": {
+    "translate": "enchantment.mobamputation.reinforcement"
+  },
+  "effects": {},
+  "exclusive_set": "#mobamputation:exclusive_set/amputation_protection",
+  "max_cost": {
+    "base": 45,
+    "per_level_above_first": 10
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#mobamputation:amputation_protective_armor",
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#mobamputation:amputation_protective_armor",
+  "weight": 5
+}

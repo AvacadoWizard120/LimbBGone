@@ -1,0 +1,13 @@
+{
+  "mobamputation.config.prop.gibTime.name": "Tempo di vita dell'arto",
+  "mobamputation.config.prop.gibGroundTime.name": "Tempo di vita dell'arto a terra",
+  "mobamputation.config.prop.blood.name": "Effetto sangue",
+  "mobamputation.config.prop.bloodCount.name": "Quantitativo di particelle di sangue",
+  "mobamputation.config.prop.bloodSplurt.name": "Sangue che zampilla dalle ferite",
+  "mobamputation.config.prop.greenBlood.name": "Colore del Sangue Verde",
+  "mobamputation.config.prop.playerGibs.name": "Arti del giocatore",
+  "mobamputation.config.prop.gibPushing.name": "Arti che spostano entita",
+  "mobamputation.config.prop.headlessDeath.name": "Morte senza testa",
+  "mobamputation.config.prop.projectileList.name": "Proiettili influenzano gli arti",
+  "mobamputation.config.prop.allowProjectileGibbing.name": "Amputazione da proiettile"
+}

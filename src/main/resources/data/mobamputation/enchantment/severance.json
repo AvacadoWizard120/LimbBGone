@@ -1,0 +1,23 @@
+{
+  "anvil_cost": 8,
+  "description": {
+    "translate": "enchantment.mobamputation.severance"
+  },
+  "effects": {},
+  "exclusive_set": "#mobamputation:exclusive_set/amputation",
+  "max_cost": {
+    "base": 60,
+    "per_level_above_first": 10
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#mobamputation:amputation_tools",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#mobamputation:amputation_tools",
+  "weight": 2
+}
